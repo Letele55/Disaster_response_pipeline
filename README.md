@@ -15,19 +15,19 @@ Run with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle,
 ## Instructions
 
 ### ETL Pipeline
-File data/process_data.py contains data cleaning pipeline that:
+File `data/process_data.py` contains the data cleaning pipeline that:
 
-Loads the messages and categories dataset
-Merges the two datasets
-Cleans the data
-Stores it in a SQLite database
+- Loads the messages and categories dataset
+- Merges the two datasets
+- Cleans the data
+- Stores it in a SQLite database
 
 ### ML Pipeline
-File models/train_classifier.py contains machine learning pipeline that:
+File `models/train_classifier.py` contains the machine learning pipeline that:
 
-Loads data from the SQLite database
-Splits the data into training and testing sets
-Builds a text processing and machine learning pipeline
+- Loads data from the SQLite database
+- Splits the data into training and testing sets
+- Builds a text processing and machine learning pipeline
 
 
 1. Run the following commands in the project's root directory to set up your database and model.
