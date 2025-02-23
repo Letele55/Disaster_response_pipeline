@@ -13,12 +13,29 @@ The dataset includes actual messages sent during disaster situations. I used an 
 Run with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle, Sklearn, plotly and flask libraries
 
 ## Instructions
+
+### ETL Pipeline
+File data/process_data.py contains data cleaning pipeline that:
+
+Loads the messages and categories dataset
+Merges the two datasets
+Cleans the data
+Stores it in a SQLite database
+
+### ML Pipeline
+File models/train_classifier.py contains machine learning pipeline that:
+
+Loads data from the SQLite database
+Splits the data into training and testing sets
+Builds a text processing and machine learning pipeline
+
+
 1. Run the following commands in the project's root directory to set up your database and model.
 
- To run ETL pipeline that cleans data and stores in database ''' python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db'''
- To run ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+ - To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response_db.db
+ - To run ML pipeline that trains classifier and saves python models/train_classifier.py data/disaster_response_db.db models/classifier.pkl
  
-2. Run the following command in the app's directory to run your web app. python run.py
+2. Run the following command in the app's directory to run your web app. python app/run.py
 
 3. Go to http://0.0.0.0:3000/
 
